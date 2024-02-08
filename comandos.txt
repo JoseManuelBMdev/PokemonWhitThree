@@ -6,3 +6,12 @@ npm run dev
 
 //cuando no tengamos dependencias instaladas pero si el proyecto ejecutamos:
 npm i
+
+//git
+git init
+git status
+git config --global --add safe.directory 'C:/Users/Acer/Documents/VS_Code/three.js curso2/nexts'   
+git add .
+git commit -m "primer commit"
+git remote add origin https://github.com/JoseManuelBMdev/PokemonWhitThree.git
+git push origin master
