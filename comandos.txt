@@ -3,6 +3,7 @@ npm init --yes
 npm install next@latest react@latest react-dom@latest
 npm i next react react-dom
 npm run dev
+//para levantar el servidor
 
 //cuando no tengamos dependencias instaladas pero si el proyecto ejecutamos:
 npm i
@@ -15,3 +16,15 @@ git add .
 git commit -m "primer commit"
 git remote add origin https://github.com/JoseManuelBMdev/PokemonWhitThree.git
 git push origin master
+
+npm i -D typescript @types/react @types/node
+
+nosotros estamos usando next.js y webpack por defecto
+
+intelisense para three.js
+
+creamos en página -app.tsx es algo especial[
+    lo que creamos aquí será para todos los archivos
+]
+
+../ "para volver atras en el sistema de carpetas"
