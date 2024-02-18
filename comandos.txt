@@ -28,3 +28,8 @@ creamos en página -app.tsx es algo especial[
 ]
 
 ../ "para volver atras en el sistema de carpetas"
+
+los heroes para actualizarlo a githab
+git add .
+git commit -m ""
+git push origin master

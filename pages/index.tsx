@@ -23,6 +23,22 @@ function HomePage(){
         });
         const cube = new THREE.Mesh(geometry, material);
 
+        //crear skybox
+
+        const skyGeometry = new THREE.SphereGeometry(360,25,25);
+        const loader = new THREE.TextureLoader();
+        const texture = loader.load("/img/custom-sky.png");
+        const imgMaterial = new THREE.MeshPhongMaterial({map:texture});
+        const skybox = new THREE.Mesh(skyGeometry, imgMaterial);
+        scene.add(skybox);
+        skybox.material.side = THREE.BackSide
+
+        //luz
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+        const hemisphereLight = new THREE.HemisphereLight(0xffffff,0.8);
+        ambientLight.add(hemisphereLight)
+        scene.add(ambientLight);
+
         //adds
         scene.add(cube);
 
@@ -31,7 +47,7 @@ function HomePage(){
         renderer.setSize(window.innerWidth,window.innerHeight);
 
         function animate(){
-            cube.rotation.z += .005;
+            cube.rotation.y += .005;
 
 
             renderer.render(scene, camera)
